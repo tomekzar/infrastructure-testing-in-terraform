@@ -16,7 +16,7 @@ resource "aws_s3_bucket" "example_bucket" {
     }
 
     noncurrent_version_transition {
-      days          = 60
+      days          = 90
       storage_class = "GLACIER"
     }
 
