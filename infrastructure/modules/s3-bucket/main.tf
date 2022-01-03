@@ -11,17 +11,17 @@ resource "aws_s3_bucket" "this" {
     enabled = true
 
     noncurrent_version_transition {
-      days          = 30
+      days          = 45
       storage_class = "STANDARD_IA"
     }
 
     noncurrent_version_transition {
-      days          = 60
+      days          = 90
       storage_class = "GLACIER"
     }
 
     noncurrent_version_expiration {
-      days = 90
+      days = 120
     }
   }
 
